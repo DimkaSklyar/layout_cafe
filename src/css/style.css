@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import url(../libs/smartbasket/css/smartbasket.min.css);
+
 @font-face {
   font-family: "roboto-example";
   font-weight: normal;
@@ -7982,7 +7984,9 @@ body {
   color: #fff;
 }
 
-.btn_order {
+.btn_order,
+.smart-basket__alert-button,
+.smart-basket__close-form {
   display: inline-block;
   border: none;
   outline: 0 none;
@@ -7998,7 +8002,9 @@ body {
   opacity: 0;
 }
 
-.btn_order:before {
+.btn_order:before,
+  .smart-basket__alert-button:before,
+  .smart-basket__close-form:before {
   position: absolute;
   content: '\f218';
   font-family: "FontAwesome";
@@ -8008,8 +8014,37 @@ body {
   font-weight: normal;
 }
 
-.btn_order:hover {
+.btn_order:hover,
+  .smart-basket__alert-button:hover,
+  .smart-basket__close-form:hover {
   background-color: #589c3f;
+}
+
+.smart-basket__alert-button,
+.smart-basket__close-form {
+  opacity: 1;
+  width: 49%;
+}
+
+.smart-basket__alert-button:before,
+  .smart-basket__close-form:before {
+  content: none;
+}
+
+.smart-basket__alert-button_by,
+.smart-basket__send-form {
+  background-color: #d1333c;
+  color: #fff;
+}
+
+.smart-basket__alert-button_by:hover,
+  .smart-basket__send-form:hover {
+  background-color: #ab262e;
+}
+
+.smart-basket__close-form {
+  width: auto;
+  padding: 15px 25px;
 }
 
 .view-more_btn {
@@ -8283,11 +8318,11 @@ body {
   color: #fff;
 }
 
-.size__item.active {
+.size__item.size__item_active {
   background-color: #6fba54;
 }
 
-.size__item.active:hover {
+.size__item.size__item_active:hover {
   background-color: #589c3f;
 }
 
@@ -8461,12 +8496,26 @@ body {
   font-size: 52px;
 }
 
-.input-form {
+.input-form,
+.smart-basket__user-input,
+.smart-basket__agreement-wrapper {
   border: 1px solid #2d323f;
   background-color: #1d2331;
   padding: 15px 20px;
   border-radius: 5px;
   width: 60%;
+}
+
+.smart-basket__user-input {
+  width: 100%;
+}
+
+.smart-basket__agreement-wrapper {
+  width: 49%;
+}
+
+.smart-basket__link-agreement {
+  color: #fff;
 }
 
 .form-submit {
@@ -8795,6 +8844,75 @@ footer h2 {
 
 .slick-slide:focus {
   outline: 0 none;
+}
+
+.smart-basket__min {
+  background: none;
+  border: none;
+  outline: 0 none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.smart-basket__min-count {
+  vertical-align: super;
+  border: 1px solid #e5d7b2;
+  border-radius: 50%;
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  color: #e5d7b2;
+}
+
+.smart-basket {
+  background-color: #1b212f;
+}
+
+.smart-basket__form {
+  background: url("../img/body-bcg.jpg");
+  color: #fff;
+}
+
+.smart-basket__total-cost {
+  background: none;
+  color: #fff;
+}
+
+.smart-basket__alert-wrapper {
+  z-index: 9999;
+}
+
+.smart-basket__alert {
+  border-radius: 5px;
+  background: url("../img/body-bcg.jpg");
+}
+
+.smart-basket__alert-text {
+  color: #e5d7b2;
+}
+
+.smart-basket__product-quantity * {
+  color: #e5d7b2;
+  border-radius: 5px;
+}
+
+.smart-basket__input {
+  color: #fff;
+  font-weight: bold;
+}
+
+.smart-basket__remove-item {
+  border-radius: 5px;
+}
+
+.smart-basket__info-icon,
+.smart-basket__info-msgs {
+  color: #000;
+}
+
+.smart-basket__product-id {
+  visibility: hidden;
 }
 
 /*==========  Desktop First  ==========*/

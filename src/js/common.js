@@ -1,5 +1,28 @@
 $(document).ready(function () {
 
+  $('.smart-basket__wrapper').smbasket({
+    productElement: 'menu_pizza__item',
+    buttonAddToBasket: 'btn_order',
+    countryCode: '+7',
+    smartBasketCurrency: '₽',
+    productSize: 'size__item',
+    smartBasketMinArea: 'cart',
+    productPrice: 'product__price-number',
+    productQuantityWrapper: 'product__quantity',
+    telIsRequired: false,
+    emailIsRequired: true,
+    agreement: {
+      isRequired: true,
+      isChecked: true,
+      isLink: 'https://smartlanding.biz'
+    }
+  });
+
+  // $(".cart").click(function (e) {
+  //   e.preventDefault();
+  //   $(".smart-basket").toggleClass("smart-basket_active");
+  // });
+
   $('.slider').slick();
 
   $('.testimonial-carousel').slick();
@@ -41,7 +64,7 @@ $(document).ready(function () {
       // instead of a settings object
     ]
   });
-  
+
 
   $('.recommend-carousel').slick({
     dots: true,

@@ -12,7 +12,7 @@
 
 <body>
 	<div class="page-body">
-
+		<div class="smart-basket__wrapper"></div>
 		<header>
 			<div class="container">
 				<div class="row justify-content-center align-items-center top-header">
@@ -35,7 +35,6 @@
 					<div class="col-3">
 						<div class="cart__wrapper">
 							<div class="cart">
-								<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 							</div>
 						</div>
 					</div>
@@ -170,14 +169,20 @@
 										<span class="type-pizza"><img src="img/pizza/vegan.svg" alt=""></span>
 										<p class="menu_pizza__desc">Томаты, мацарелла и так далее помидоры и ещё всяко</p>
 										<div class="size">
-											<div class="size__item active">25 см</div>
-											<div class="size__item">30 см</div>
-											<div class="size__item">35 см</div>
+											<div class="size__item active" data-sb-curent-price="350" data-sb-curent-size="25" data-sb-curent-id-or-vendor-code="p25_1">25 см</div>
+											<div class="size__item" data-sb-curent-price="400" data-sb-curent-size="30" data-sb-curent-id-or-vendor-code="p30_1">30 см</div>
+											<div class="size__item"  data-sb-curent-price="450" data-sb-curent-size="35" data-sb-curent-id-or-vendor-code="p35_1">35 см</div>
 										</div>
 										<div class="price">
-											350 руб.
+											<span class="product__price-number">350 </span><span> руб.</span>
 										</div>
-										<button class="btn_order">Купить</button>
+										<div class="product__quantity d-none"></div>
+										<button class="btn_order" 
+										data-sb-id-or-vendor-code="1"
+										data-sb-product-name="Милано"
+										data-sb-product-price="350"
+										data-sb-product-quantity="1"
+										data-sb-product-img="img/pizza/pizza-1.jpg">Купить</button>
 									</div>
 								</div>
 								<div class="col-6">
@@ -194,7 +199,7 @@
 											<div class="size__item">35 см</div>
 										</div>
 										<div class="price">
-											350 руб.
+											350
 										</div>
 										<button class="btn_order">Купить</button>
 									</div>
@@ -1004,6 +1009,7 @@
 		<script src="js/scripts.min.js"></script>
 		<script src="js/slick.min.js"></script>
 		<script src="js/mixitup.min.js"></script>
+		<script src="js/smartbasket.min.js"></script>
 		<script src="js/common.js"></script>
 	</div>
 </body>
