@@ -23,9 +23,14 @@ $(document).ready(function () {
   //   $(".smart-basket").toggleClass("smart-basket_active");
   // });
 
-  $('.slider').slick();
+  $('.slider').slick({
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000
+  });
 
   $('.testimonial-carousel').slick();
+
 
   $('.carousel-pizza').slick({
     dots: true,
@@ -102,7 +107,7 @@ $(document).ready(function () {
     ]
   });
   var mixer = mixitup('.mixitup-1');
-
+  var mixer = mixitup('.mixitup-2');
 
   $(".menu_tabs__item").click(function (e) {
     $(".menu_tabs__item").removeClass("active");
@@ -111,4 +116,44 @@ $(document).ready(function () {
     $(".menu_tabs__content").removeClass("active");
     $(".menu_tabs__content").eq(posTabs).addClass("active");
   });
+});
+
+function AjaxFormRequest(result_id, formMain, url) {
+  jQuery.ajax({
+    url: url,
+    type: "POST",
+    dataType: "html",
+    data: jQuery("#" + formMain).serialize(),
+    success: function (response) {
+      $(':input', '#' + formMain)
+        .not(':button, :submit, :reset, :hidden')
+        .val('')
+        .removeAttr('checked')
+        .removeAttr('selected');
+      setTimeout(() => {
+        $("#message").hide();
+      }, 5000);
+    },
+    error: function (response) {
+      var par = document.getElementById(result_id);
+      var error = document.createElement('p');
+      error.classList.add("mt-3","error");
+      error.innerHTML = "Возникла ошибка при отправке формы.";
+      par.appendChild(error);
+      setTimeout(func, 7000);
+    }
+  });
+}
+
+function func() {
+  $("p.mt-3").detach();
+}
+$('#descount').submit(function (e) {
+  e.preventDefault();
+  AjaxFormRequest('messegeResult-descount', 'descount', '../descount.php');
+});
+
+$('#subscribe').submit(function (e) {
+  e.preventDefault();
+  AjaxFormRequest('messegeResult-subscribe', 'subscribe', '../subscribe.php');
 });

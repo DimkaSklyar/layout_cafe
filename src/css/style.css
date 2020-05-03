@@ -8296,6 +8296,7 @@ body {
 .menu_pizza__name {
   margin-top: 10px;
   margin-bottom: 0;
+  color: #fff;
 }
 
 .menu_pizza__desc {
@@ -8504,6 +8505,7 @@ body {
   padding: 15px 20px;
   border-radius: 5px;
   width: 60%;
+  color: #fff;
 }
 
 .smart-basket__user-input {
@@ -8913,6 +8915,14 @@ footer h2 {
 
 .smart-basket__product-id {
   visibility: hidden;
+}
+
+.error {
+  font-size: 14px !important;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: red;
 }
 
 /*==========  Desktop First  ==========*/
