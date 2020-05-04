@@ -11,13 +11,15 @@
 </head>
 
 <body>
+	<div class="bcg-opacity"></div>
 	<div class="page-body">
 		<div class="smart-basket__wrapper"></div>
 		<header>
 			<div class="container">
 				<div class="row justify-content-center align-items-center top-header">
 					<div class="col-3">
-						<div class="social">
+						<button class="btn_menu d-md-none"><i class="fa fa-bars" aria-hidden="true"></i></button>
+						<div class="social d-md-block d-none">
 							<ul class="social__items">
 								<li><a href="https://vk.com" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
 								<li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"
@@ -43,6 +45,7 @@
 					<div class="col-12">
 						<nav>
 							<ul class="nav">
+								<button class="btn_close_menu d-md-none"><i class="fa fa-times" aria-hidden="true"></i></button>
 								<li><a href="pizza.html">
 										<div class="nav__icon"><img src="img/icon/pizza.png" alt=""></div>
 										<span>Пицца</span>
@@ -71,6 +74,15 @@
 										<div class="nav__icon"><img src="img/icon/drink.png" alt=""></div>
 										<span>Напитки</span>
 									</a></li>
+									<li class="d-md-none other-nav"><a href="about.html">
+										<span>О нас</span>
+									</a></li>
+								<li class="d-md-none other-nav"><a href="contacts.html">
+										<span>Контакты</span>
+									</a></li>
+									<li class="d-md-none other-nav"><a href="politic.html">
+										<span>Политика конфиденциальности</span>
+									</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -85,7 +97,7 @@
 				<div class="slider__content">
 					<div class="container">
 						<div class="row">
-							<div class="col-7 offset-5">
+							<div class="col-md-7 offset-md-5 col-12">
 								<div class="content__icon">
 									<img src="img/icon/cheese.png" alt="">
 								</div>
@@ -102,7 +114,7 @@
 				<div class="slider__content">
 					<div class="container">
 						<div class="row">
-							<div class="col-7 offset-5">
+							<div class="col-md-7 offset-md-5 col-12">
 								<div class="content__icon">
 									<img src="img/icon/tea.png" alt="">
 								</div>
@@ -119,7 +131,7 @@
 				<div class="slider__content">
 					<div class="container">
 						<div class="row">
-							<div class="col-6 offset-6">
+							<div class="col-md-6 offset-md-6 col-12">
 								<div class="content__icon">
 									<img src="img/icon/pizza-big.png" alt="">
 								</div>
@@ -136,7 +148,7 @@
 		<section class="page-section chef">
 			<div class="container">
 				<div class="row">
-					<div class="col-4 offset-1">
+					<div class="col-lg-4 offset-lg-1 col-md-7 offset-md-4 col-9 offset-2">
 						<div class="chef-main">
 							<div class="chef-main__img">
 								<img src="img/chef.jpg" alt="">
@@ -152,7 +164,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-6 offset-1">
+					<div class="col-xl-6 offset-xl-1 col-lg-7 col-12">
 						<div class="chef__menu_pizza">
 							<h2>Мы готовим для вас</h2>
 							<div class="pizza_arrow">
@@ -276,7 +288,7 @@
 		<section class="banner page-section">
 			<div class="container">
 				<div class="row">
-					<div class="col-4">
+					<div class="col-md-4 col-12">
 						<div class="banner__item">
 							<div class="banner__img"><img src="img/banner/banner-1.jpg" alt=""></div>
 							<div class="banner__text">
@@ -286,7 +298,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-8">
+					<div class="col-md-8 col-12">
 						<div class="banner__item">
 							<div class="banner__img"><img src="img/banner/banner-2.jpg" alt=""></div>
 							<div class="banner__text">
@@ -324,7 +336,7 @@
 						<button class="category_btn" type="button" data-filter=".chick">Курица</button>
 					</div>
 					<div class="row mixitup-1">
-						<div class="col-3 mix gov">
+						<div class="col-lg-3 col-md-4 col-6 mix gov">
 							<div class="menu_pizza__item">
 								<div class="menu_pizza__img">
 									<img src="img/burger/burger-1.jpg" alt="">
@@ -347,7 +359,7 @@
 									data-sb-product-img="img/burger/burger-1.jpg">Купить</button>
 							</div>
 						</div>
-						<div class="col-3 mix fish">
+						<div class="col-lg-3 col-md-4 col-6 mix fish">
 							<div class="menu_pizza__item">
 								<div class="menu_pizza__img">
 									<img src="img/burger/burger-2.jpg" alt="">
@@ -370,7 +382,7 @@
 									data-sb-product-img="img/burger/burger-2.jpg">Купить</button>
 							</div>
 						</div>
-						<div class="col-3 mix chick">
+						<div class="col-lg-3 col-md-4 col-6 mix chick">
 							<div class="menu_pizza__item">
 								<div class="menu_pizza__img">
 									<img src="img/burger/burger-3.jpg" alt="">
@@ -393,7 +405,7 @@
 									data-sb-product-img="img/burger/burger-3.jpg">Купить</button>
 							</div>
 						</div>
-						<div class="col-3 mix chick">
+						<div class="col-lg-3 col-md-4 col-6 mix chick">
 							<div class="menu_pizza__item">
 								<div class="menu_pizza__img">
 									<img src="img/burger/burger-4.jpg" alt="">
@@ -416,7 +428,7 @@
 									data-sb-product-img="img/burger/burger-4.jpg">Купить</button>
 							</div>
 						</div>
-						<div class="col-3 mix chick">
+						<div class="col-lg-3 col-md-4 col-6 mix chick">
 							<div class="menu_pizza__item">
 								<div class="menu_pizza__img">
 									<img src="img/burger/burger-5.jpg" alt="">
@@ -439,7 +451,7 @@
 									data-sb-product-img="img/burger/burger-5.jpg">Купить</button>
 							</div>
 						</div>
-						<div class="col-3 mix chick">
+						<div class="col-lg-3 col-md-4 col-6 mix chick">
 							<div class="menu_pizza__item">
 								<div class="menu_pizza__img">
 									<img src="img/burger/burger-6.jpg" alt="">
@@ -462,7 +474,7 @@
 									data-sb-product-img="img/burger/burger-6.jpg">Купить</button>
 							</div>
 						</div>
-						<div class="col-3 mix chick">
+						<div class="col-lg-3 col-md-4 col-6 mix chick">
 							<div class="menu_pizza__item">
 								<div class="menu_pizza__img">
 									<img src="img/burger/burger-7.jpg" alt="">
@@ -485,7 +497,7 @@
 									data-sb-product-img="img/burger/burger-7.jpg">Купить</button>
 							</div>
 						</div>
-						<div class="col-3 mix chick gov fish">
+						<div class="col-lg-3 col-md-4 col-6 mix chick gov fish">
 							<div class="menu_pizza__item view-more">
 								<a href="burger.html" class="view-more_btn">Смотреть ещё...</a>
 							</div>
@@ -501,7 +513,7 @@
 						<button class="category_btn" type="button" data-filter=".hot">Острая</button>
 					</div>
 					<div class="row mixitup-2">
-						<div class="col-3 mix grib veg">
+						<div class="col-lg-3 col-md-4 col-6 mix grib veg">
 							<div class="menu_pizza__item">
 								<div class="menu_pizza__img">
 									<img src="img/pizza/pizza-5.jpg" alt="">
@@ -526,7 +538,7 @@
 									data-sb-product-img="img/pizza/pizza-5.jpg">Купить</button>
 							</div>
 						</div>
-						<div class="col-3 mix veg">
+						<div class="col-lg-3 col-md-4 col-6 mix veg">
 							<div class="menu_pizza__item">
 								<div class="menu_pizza__img">
 									<img src="img/pizza/pizza-6.jpg" alt="">
@@ -551,7 +563,7 @@
 									data-sb-product-img="img/pizza/pizza-6.jpg">Купить</button>
 							</div>
 						</div>
-						<div class="col-3 mix meat">
+						<div class="col-lg-3 col-md-4 col-6 mix meat">
 							<div class="menu_pizza__item">
 								<div class="menu_pizza__img">
 									<img src="img/pizza/pizza-7.jpg" alt="">
@@ -576,7 +588,7 @@
 									data-sb-product-img="img/pizza/pizza-7.jpg">Купить</button>
 							</div>
 						</div>
-						<div class="col-3 mix meat hot">
+						<div class="col-lg-3 col-md-4 col-6 mix meat hot">
 							<div class="menu_pizza__item">
 								<div class="menu_pizza__img">
 									<img src="img/pizza/pizza-8.jpg" alt="">
@@ -601,7 +613,7 @@
 									data-sb-product-img="img/pizza/pizza-8.jpg">Купить</button>
 							</div>
 						</div>
-						<div class="col-3 mix meat hot grib">
+						<div class="col-lg-3 col-md-4 col-6 mix meat hot grib">
 							<div class="menu_pizza__item">
 								<div class="menu_pizza__img">
 									<img src="img/pizza/pizza-9.jpg" alt="">
@@ -626,7 +638,7 @@
 									data-sb-product-img="img/pizza/pizza-9.jpg">Купить</button>
 							</div>
 						</div>
-						<div class="col-3 mix veg hot">
+						<div class="col-lg-3 col-md-4 col-6 mix veg hot">
 							<div class="menu_pizza__item">
 								<div class="menu_pizza__img">
 									<img src="img/pizza/pizza-10.jpg" alt="">
@@ -653,7 +665,7 @@
 									data-sb-product-img="img/pizza/pizza-10.jpg">Купить</button>
 							</div>
 						</div>
-						<div class="col-3 mix veg">
+						<div class="col-lg-3 col-md-4 col-6 mix veg">
 							<div class="menu_pizza__item">
 								<div class="menu_pizza__img">
 									<img src="img/pizza/pizza-3.jpg" alt="">
@@ -679,7 +691,7 @@
 									data-sb-product-img="img/pizza/pizza-3.jpg">Купить</button>
 							</div>
 						</div>
-						<div class="col-3 mix veg hot meat grib">
+						<div class="col-lg-3 col-md-4 col-6 mix veg hot meat grib">
 							<div class="menu_pizza__item view-more">
 								<a href="pizza.html" class="view-more_btn">Смотреть ещё...</a>
 							</div>
@@ -690,7 +702,7 @@
 					<div class="menu_tabs__content__btn">
 					</div>
 					<div class="row">
-						<div class="col-3">
+						<div class="col-lg-3 col-md-4 col-6">
 							<div class="menu_pizza__item">
 								<div class="menu_pizza__img">
 									<img src="img/roll/roll-1.jpg" alt="">
@@ -711,7 +723,7 @@
 									data-sb-product-img="img/roll/roll-1.jpg">Купить</button>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-lg-3 col-md-4 col-6">
 							<div class="menu_pizza__item">
 								<div class="menu_pizza__img">
 									<img src="img/roll/roll-2.jpg" alt="">
@@ -732,7 +744,7 @@
 									data-sb-product-img="img/roll/roll-2.jpg">Купить</button>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-lg-3 col-md-4 col-6">
 							<div class="menu_pizza__item">
 								<div class="menu_pizza__img">
 									<img src="img/roll/roll-3.jpg" alt="">
@@ -753,7 +765,7 @@
 									data-sb-product-img="img/roll/roll-3.jpg">Купить</button>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-lg-3 col-md-4 col-6">
 							<div class="menu_pizza__item">
 								<div class="menu_pizza__img">
 									<img src="img/roll/roll-4.jpg" alt="">
@@ -774,7 +786,7 @@
 									data-sb-product-img="img/roll/roll-4.jpg">Купить</button>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-lg-3 col-md-4 col-6">
 							<div class="menu_pizza__item">
 								<div class="menu_pizza__img">
 									<img src="img/roll/roll-5.jpg" alt="">
@@ -795,7 +807,7 @@
 									data-sb-product-img="img/roll/roll-5.jpg">Купить</button>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-lg-3 col-md-4 col-6">
 							<div class="menu_pizza__item">
 								<div class="menu_pizza__img">
 									<img src="img/roll/roll-6.jpg" alt="">
@@ -816,7 +828,7 @@
 									data-sb-product-img="img/roll/roll-6.jpg">Купить</button>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-lg-3 col-md-4 col-6">
 							<div class="menu_pizza__item">
 								<div class="menu_pizza__img">
 									<img src="img/roll/roll-7.jpg" alt="">
@@ -837,7 +849,7 @@
 									data-sb-product-img="img/roll/roll-7.jpg">Купить</button>
 							</div>
 						</div>
-						<div class="col-3 mix">
+						<div class="col-lg-3 col-md-4 col-6">
 							<div class="menu_pizza__item view-more">
 								<a href="sushi.html" class="view-more_btn">Смотреть ещё...</a>
 							</div>
@@ -848,7 +860,7 @@
 					<div class="menu_tabs__content__btn">
 					</div>
 					<div class="row">
-						<div class="col-3">
+						<div class="col-lg-3 col-md-4 col-6">
 							<div class="menu_pizza__item">
 								<div class="menu_pizza__img">
 									<img src="img/wok/wok-1.jpg" alt="">
@@ -869,7 +881,7 @@
 									data-sb-product-img="img/wok/wok-1.jpg">Купить</button>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-lg-3 col-md-4 col-6">
 							<div class="menu_pizza__item">
 								<div class="menu_pizza__img">
 									<img src="img/wok/wok-2.jpg" alt="">
@@ -890,7 +902,7 @@
 									data-sb-product-img="img/wok/wok-2.jpg">Купить</button>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-lg-3 col-md-4 col-6">
 							<div class="menu_pizza__item">
 								<div class="menu_pizza__img">
 									<img src="img/wok/wok-3.jpg" alt="">
@@ -911,7 +923,7 @@
 									data-sb-product-img="img/wok/wok-3.jpg">Купить</button>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-lg-3 col-md-4 col-6">
 							<div class="menu_pizza__item">
 								<div class="menu_pizza__img">
 									<img src="img/wok/wok-4.jpg" alt="">
@@ -932,7 +944,7 @@
 									data-sb-product-img="img/wok/wok-4.jpg">Купить</button>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-lg-3 col-md-4 col-6">
 							<div class="menu_pizza__item">
 								<div class="menu_pizza__img">
 									<img src="img/wok/wok-5.jpg" alt="">
@@ -953,7 +965,7 @@
 									data-sb-product-img="img/wok/wok-5.jpg">Купить</button>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-lg-3 col-md-4 col-6">
 							<div class="menu_pizza__item view-more">
 								<a href="sushi.html" class="view-more_btn">Смотреть ещё...</a>
 							</div>
@@ -966,7 +978,7 @@
 		<section class="descount">
 			<div class="container">
 				<div class="row">
-					<div class="col-6">
+					<div class="col-xl-6 col-lg-7 col-md-8 col-12">
 						<div class="descount__item">
 							<h2>Скидка 10%</h2>
 							<p>Получить промокод</p>
@@ -987,14 +999,14 @@
 					<h2>FOODZ - Кафе, ПИЦЦА, бургеры, ДОСТАВКА ЕДЫ</h2>
 				</div>
 				<div class="row information__content">
-					<div class="col-5 offset-1">
+					<div class="col-xl-5 offset-xl-1 col-md-6 col-12">
 						<div class="information__text">
 							<p>Давать пицце ее уникальный вкус и текстуру - наша специальность. Хороший соус, нужное количество сыра и
 								отличная корочка отличают Кафе Foodz от других кафе. У нас есть хороший выбор вкусных пицц,
 								бургеров, воков в дополнение к более традиционной пицце и фирменненным суши.</p>
 						</div>
 					</div>
-					<div class="col-5">
+					<div class="col-xl-5 col-md-6 col-12">
 						<div class="information__text">
 							<p>
 								Интерьер удивительно чистый, настолько ярко освещенный и блестящий, что почти отрезвляет. Наш сервис
@@ -1051,7 +1063,7 @@
 		<section class="time-work">
 			<div class="container">
 				<div class="row align-items-center">
-					<div class="col-4">
+					<div class="col-lg-4 col-12">
 						<div class="time-work__item">
 							<div class="time-work__icon">
 								<img src="img/icon/time-work.png" alt="">
@@ -1061,14 +1073,14 @@
 							<p class="time-work_p-3">Скидка 15%</p>
 						</div>
 					</div>
-					<div class="col-4">
+					<div class="col-md-4 offset-md-4 col-12">
 						<div class="time-work__item">
 							<div class="time-work__img"><img src="img/time-work_decor-1.jpg" alt=""></div>
 							<div class="time-work__item__decor"><img src="img/time-work_decor-2.png" alt=""></div>
 						</div>
 					</div>
-					<div class="col-4">
-						<div class="time-work__item">
+					<div class="col-lg-4 col-md-6 offset-md-3 col-12">
+						<div class="time-work__item time-work__top">
 							<div class="time-work__item__about">
 								<p>Наше кафе предлагает своим гостям большой выбор классических европейских блюд и, конечно,
 									традиционную кухню Южного региона, а также оригинальные идеи от Шеф-повара.</p>
@@ -1244,8 +1256,8 @@
 
 		<section class="advantages">
 			<div class="container">
-				<div class="row">
-					<div class="col-4">
+				<div class="row justify-md-content-center">
+					<div class="col-lg-4 col-6">
 						<div class="advantages__item">
 							<div class="advantages__icon"><img src="img/icon/clock.png" alt=""></div>
 							<div class="advantages__text">
@@ -1253,7 +1265,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-4">
+					<div class="col-lg-4 col-6">
 						<div class="advantages__item">
 							<div class="advantages__icon"><img src="img/icon/chef.png" alt=""></div>
 							<div class="advantages__text">
@@ -1261,7 +1273,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-4">
+					<div class="col-lg-4 col-12">
 						<div class="advantages__item">
 							<div class="advantages__icon"><img src="img/icon/cheese.png" alt=""></div>
 							<div class="advantages__text">
@@ -1276,7 +1288,7 @@
 		<section class="subscribe">
 			<div class="container">
 				<div class="row">
-					<div class="col-10 offset-1">
+					<div class="col-md-10 offset-md-1 col-12">
 						<div class="subscribe__inner">
 							<h2>Подпишитесь на новостную рассылку</h2>
 							<p>Подпишитесь на еженедельную рассылку чтобы быть в курсе всех новостей</p>
@@ -1293,8 +1305,8 @@
 		</section>
 		<footer>
 			<div class="container">
-				<div class="row">
-					<div class="col-5">
+				<div class="row justify-md-content-center">
+					<div class="col-lg-5 col-12 ta-md-c">
 						<a href="index.html" class="logo__link">
 							<div class="logo"><img src="img/logo.svg" alt=""></div>
 						</a>
@@ -1304,7 +1316,7 @@
 						</div>
 						<p class="address">Краснодар, ул. Красная 72/1</p>
 					</div>
-					<div class="col-2">
+					<div class="col-lg-2 col-md-4 col-12">
 						<h2>Наше меню</h2>
 						<ul class="nav-bottom">
 							<li><a href="pizza.html">
@@ -1330,7 +1342,7 @@
 								</a></li>
 						</ul>
 					</div>
-					<div class="col-2">
+					<div class="col-lg-2 col-md-4 col-12">
 						<h2>Навигация</h2>
 						<ul class="nav-bottom">
 							<li><a href="about.html">
@@ -1341,7 +1353,7 @@
 								</a></li>
 						</ul>
 					</div>
-					<div class="col-3">
+					<div class="col-lg-3 col-md-4 col-12">
 						<h2>Полезная информация</h2>
 						<ul class="nav-bottom">
 							<li><a href="politic.html">
@@ -1351,10 +1363,10 @@
 					</div>
 				</div>
 				<div class="row copyright">
-					<div class="col-6">
+					<div class="col-md-6 col-12">
 						<p>© Copyright 2020 Кафе - Foodz. Все права защищены.</p>
 					</div>
-					<div class="col-6">
+					<div class="col-md-6 col-12 flex-first flex-md-unordered">
 						<ul class="social__items">
 							<li><a href="https://vk.com" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
 							<li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"

@@ -18,15 +18,23 @@ $(document).ready(function () {
     }
   });
 
-  // $(".cart").click(function (e) {
-  //   e.preventDefault();
-  //   $(".smart-basket").toggleClass("smart-basket_active");
-  // });
+$(".btn_menu").click(function (e) { 
+  e.preventDefault();
+  $(".nav").addClass("active");
+  $(".bcg-opacity").addClass("active");
+
+});
+
+$(".btn_close_menu").click(function (e) { 
+  e.preventDefault();
+  $(".nav").removeClass("active");
+  $(".bcg-opacity").removeClass("active");
+});
 
   $('.slider').slick({
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 3000
+    autoplaySpeed: 30000
   });
 
   $('.testimonial-carousel').slick();
@@ -44,8 +52,8 @@ $(document).ready(function () {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 3,
+          slidesToScroll: 1,
           infinite: true,
           dots: true
         }
@@ -54,7 +62,7 @@ $(document).ready(function () {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToScroll: 1
         }
       },
       {
@@ -81,8 +89,8 @@ $(document).ready(function () {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 3,
+          slidesToScroll: 1,
           infinite: true,
           dots: true
         }

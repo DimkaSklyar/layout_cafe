@@ -61,6 +61,8 @@ body
 		top: 50%
 		transform: translateY(-50%)
 		font-weight: normal
+		+media-breakpoint-down(lg)
+			left: 45px
 	&:hover
 		background-color: darken(#6fba54, 10%)
 .smart-basket__alert-button,
@@ -96,6 +98,9 @@ body
 		background-color: lighten(#aaacb2,10%)
 		color: #1d2331
 
+header
+	+media-breakpoint-down(sm)
+		background-color: #1f2430
 
 .read-more
 	cursor: pointer
@@ -107,11 +112,27 @@ body
 .page-body
 	background-image: url('../img/body-bcg.jpg')
 	background-color: #1d2331
+	min-width: 500px
+	overflow-x: hidden
 .top-header
 	padding: 20px 0
+	+media-breakpoint-down(sm)
+		padding: 10px 15px
+		position: fixed
+		z-index: 98
+		left: 0
+		right: 0
+		top: 0
+		background-color: #1f2430
+
 	.logo
 		text-align: center
 		margin: 0 auto
+		+media-breakpoint-down(sm)
+			width: 50px
+			height: auto
+			img
+				width: 100%
 		&__link
 			display: inline-block
 
@@ -127,7 +148,17 @@ body
 
 	&__wrapper
 		text-align: right
-
+.bcg-opacity
+	background: rgba(#000,.3)
+	position: fixed
+	top: 0
+	bottom: 0
+	right: 0
+	left: 0
+	z-index: 99
+	display: none
+	&.active
+		display: block
 .social
 	&__items
 		display: flex
@@ -136,20 +167,43 @@ body
 				margin-right: 30px
 			a
 				color: #fff
-
+.nav li.other-nav
+	margin: 0
 .nav
 	display: flex
 	justify-content: center
 	padding: 20px 0 30px
+	+media-breakpoint-down(sm)
+		position: fixed
+		z-index: 999
+		background-color: #1f2430
+		flex-direction: column
+		top: 0
+		bottom: 0
+		left: -100%
+		width: 320px
+		padding: 30px
+		justify-content: flex-start
+		padding-top: 100px
+		transition: .3s
+	&.active
+		left: 0
 	&__icon
 		transition: .3s
+		+media-breakpoint-down(sm)
+			margin-right: 10px
 	li
 		margin: 0 25px
 		text-align: center
+		+media-breakpoint-down(sm)
+			text-align: left
+			margin: 15px 0
 		a
 			color: #fff
 			font-weight: bold
 			padding-top: 10px
+			+media-breakpoint-down(sm)
+				display: flex
 			&:hover .nav__icon
 				transform: scaleX(-1)
 				
@@ -159,11 +213,29 @@ body
 
 
 .slider
+	+media-breakpoint-down(sm)
+		margin-top: 58px
 	&__item
 		position: relative
 	&__img
+		+media-breakpoint-down(md)
+			height: 500px
+		+media-breakpoint-down(sm)
+			height: 80vh
+		&:before
+			+media-breakpoint-down(sm)
+				content: ''
+				position: absolute
+				top: 0
+				right: 0
+				bottom: 0
+				left: 0
+				background-color: rgba(#000,.4)
 		img
 			width: 100%
+			+media-breakpoint-down(md)
+				height: 100%
+				width: auto
 	
 	&__content
 		position: absolute
@@ -178,8 +250,22 @@ body
 		&__icon
 			text-align: center
 			padding-bottom: 40px
+			+media-breakpoint-down(lg)
+				width: 100px
+				display: flex
+				justify-content: center
+				margin: 0 auto
+				padding-bottom: 20px
+				+media-breakpoint-down(md)
+					width: 60px
+				+media-breakpoint-down(sm)
+					width: 128px
 			img
 				margin: 0 auto
+				+media-breakpoint-down(lg)
+					width: 100%
+					margin: 0 auto
+					text-align: center
 
 		&__title
 			text-align: center
@@ -189,6 +275,12 @@ body
 			font-weight: bold
 			letter-spacing: -3px
 			line-height: 1
+			+media-breakpoint-down(lg)
+				font-size: 70px
+			+media-breakpoint-down(md)
+				font-size: 55px
+			+media-breakpoint-down(sm)
+				font-size: 90px
 		&__desc
 			font-size: 60px
 			font-weight: 300
@@ -196,6 +288,12 @@ body
 			color: #e5d7b2
 			text-transform: uppercase
 			letter-spacing: -3px
+			+media-breakpoint-down(lg)
+				font-size: 50px
+			+media-breakpoint-down(md)
+				font-size: 40px
+			+media-breakpoint-down(sm)
+				font-size: 60px
 		
 	.btn
 		margin-top: 30px
@@ -221,6 +319,8 @@ body
 	img
 		position: relative
 		z-index: 4
+		+media-breakpoint-down(lg)
+			width: 100%
 .chef-main__name
 	color: #e3d7b6
 	text-align: center
@@ -230,17 +330,23 @@ body
 		text-transform: uppercase
 		font-size: 35px
 		font-weight: bold
+		+media-breakpoint-down(sm)
+			font-size: 28px
 	h2
 		line-height: 1
 		margin-top: 20px
 		font-weight: normal
 .chef__menu_pizza
 	color: #fff
+	+media-breakpoint-down(sm)
+		padding-top: 40px
 	h2
 		color: #fff
 		text-transform: uppercase
 		font-size: 36px
 		padding-left: 10px
+		+media-breakpoint-down(sm)
+			font-size: 28px
 .menu_pizza__item
 	padding: 10px
 	border: 1px solid transparent
@@ -269,6 +375,7 @@ body
 	&__desc
 		color: #d0d4da
 		margin-top: 10px
+
 .size
 	display: flex
 	&__item
@@ -299,6 +406,8 @@ body
 	position: absolute
 	right: 30px
 	top: 0
+	+media-breakpoint-down(sm)
+		top: 30px
 	button
 		border-radius: 50%
 		width: 50px
@@ -319,6 +428,8 @@ body
 	&__item
 		overflow: hidden
 		position: relative
+		+media-breakpoint-down(sm)
+			margin-bottom: 30px
 		&:hover .banner__img img
 			transform: scale(1.05)
 			
@@ -333,15 +444,27 @@ body
 		color: #fff
 		top: 50%
 		right: 15px
+		+media-breakpoint-down(md)
+			top: 40%
+		+media-breakpoint-down(sm)
+			top: 35%
 		p
 			font-size: 28px
 			line-height: 1
 			margin-bottom: 5px
 			text-transform: uppercase
+			+media-breakpoint-down(md)
+				font-size: 19px
+			+media-breakpoint-down(sm)
+				font-size: 28px
 			&.big_text
 				text-transform: uppercase
 				font-weight: bold
 				font-size: 35px
+				+media-breakpoint-down(md)
+					font-size: 21px
+				+media-breakpoint-down(sm)
+					fz35PX
 
 .menu
 	padding: 100px 0
@@ -351,6 +474,8 @@ body
 		&__item
 			padding: 0 40px
 			position: relative
+			+media-breakpoint-down(sm)
+				padding: 0 15px
 			&.active
 				h2
 					color: #fff
@@ -410,9 +535,13 @@ body
 			font-weight: 300
 			font-size: 48px
 			line-height: 1
+			+media-breakpoint-down(md)
+				font-size: 38px
 		p
 			font-weight: bold
 			font-size: 52px
+			+media-breakpoint-down(md)
+				font-size: 40px
 
 .input-form,
 .smart-basket__user-input,
@@ -481,6 +610,8 @@ body
 	&__item
 		text-align: center
 		padding: 0 150px
+		+media-breakpoint-down(md)
+			padding: 0 50px
 		blockquote
 			q
 				font-size: 22px
@@ -498,6 +629,9 @@ body
 	background: url('../img/time-work_bcg.jpg') no-repeat
 	background-size: cover
 	background-position: 50%
+	&__top
+		+media-breakpoint-down(md)
+			margin-top: 80px
 	&__item
 		text-align: center
 		color: #e5d7b2
@@ -526,13 +660,19 @@ body
 		font-size: 30px
 		font-weight: 300
 		margin-top: 80px
+		+media-breakpoint-down(lg)
+			font-size: 22px
 	&_p-2
 		font-size: 40px
 		font-weight: bold
+		+media-breakpoint-down(lg)
+			font-size: 30px
 	&_p-3
 		font-size: 30px
 		font-weight: bold
 		font-size: 60px
+		+media-breakpoint-down(lg)
+			font-size: 50px
 	&__icon
 		width: 60px
 		height: 60px
@@ -559,14 +699,20 @@ body
 		margin-top: 80px
 		.slick-prev
 			left: -80px
+			+media-breakpoint-down(md)
+				left: -45px
 		.slick-next
 			right: -80px
+			+media-breakpoint-down(md)
+				right: -45px
 
 .offer
 	background: url('../img/offer.jpg') no-repeat
 	background-size: cover
 	background-position: 10% 20%
 	padding: 180px 0
+	+media-breakpoint-down(md)
+		padding: 50px 0
 	&__item
 		color: #fff
 		text-align: center
@@ -575,11 +721,17 @@ body
 		h3
 			font-weight: normal
 			font-size: 34px
+			+media-breakpoint-down(md)
+				font-size: 28px
 		p
 			font-weight: bold
 			font-size: 46px
+			+media-breakpoint-down(md)
+				font-size: 38px
 
-
+.ta-md-c
+	+media-breakpoint-down(md)
+		text-align: center
 
 .advantages
 	background: url('../img/advantages_bcg.jpg') no-repeat
@@ -623,6 +775,8 @@ footer
 		font-weight: normal
 		font-size: 20px
 		margin-bottom: 10px
+		+media-breakpoint-down(sm)
+			margin-top: 30px
 
 .subscribe
 	padding: 50px 0 0
@@ -632,16 +786,26 @@ footer
 		color: #fff
 		h2
 			font-size: 30px
+			+media-breakpoint-down(sm)
+				font-size: 26px
+		p
+			+media-breakpoint-down(sm)
+				font-size: 14px
 
 .copyright
 	margin-top: 40px
 	color: #989da4
 	.social__items
 		justify-content: flex-end
+		+media-breakpoint-down(sm)
+			justify-content: center
+			margin-bottom: 30px
 		a
 			color: #989da4
 	p
 		font-size: 12px
+		+media-breakpoint-down(sm)
+			text-align: center
 /*==========  user style  ==========*/
 .slick-next:before
 	content: '\f105'
@@ -713,4 +877,17 @@ footer
 	left: 50%
 	transform: translateX(-50%)
 	color: red
+
+.btn_menu,
+.btn_close_menu
+	background: none
+	cursor: pointer
+	outline: 0 none
+	border: none
+	color: #fff
+	font-size: 24px
+.btn_close_menu
+	position: absolute
+	top: 30px
+	right: 30px
 @import "media" // Always at the end
