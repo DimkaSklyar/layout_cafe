@@ -891,7 +891,8 @@ footer
 	top: 30px
 	right: 30px
 
-.about-us
+.about-us,
+.other-page
 	padding: 80px 0 100px
 	color: #fff
 	img
@@ -919,4 +920,66 @@ footer
 	&__name
 		padding: 15px 0 0
 		margin-bottom: 0
+
+.ol-list
+	counter-reset: item
+	margin: 0
+	padding-left: 10px
+	line-height: 1.9
+	& > li
+		display: block
+		font-weight: normal
+		font-size: 16px
+		&:before
+			content: counters(item, ".") " "
+			counter-increment: item
+	ul
+		list-style-type: disc
+		padding-left: 25px
+
+.contacts
+	&__item
+		text-align: center
+		+media-breakpoint-down(sm)
+			margin-bottom: 30px
+	&__items
+		margin-bottom: 60px
+	&__icon
+		width: 120px
+		height: 120px
+		background-color: #fff
+		border-radius: 50%
+		display: flex
+		justify-content: center
+		align-items: center
+		color: #cfd1d8
+		font-size: 35px
+		margin: 0 auto
+		margin-bottom: 30px
+	.input-form
+		background: rgb(45,50,63)
+.other-page
+	a,
+	p
+		color: #cfd1d8
+		font-weight: bold
+		font-size: 24px
+
+.map
+	+media-breakpoint-down(sm)
+		margin-bottom: 30px
+
+#svyaz
+	label,
+	input,
+	textarea
+		width: 100%
+	label
+		font-size: 14px
+		color: #cfd1d8
+	input
+		margin-bottom: 15px
+	.form-submit
+		margin-top: 15px
+		margin-left: 0
 @import "media" // Always at the end

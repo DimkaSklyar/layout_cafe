@@ -9323,31 +9323,37 @@ footer h2 {
   right: 30px;
 }
 
-.about-us {
+.about-us,
+.other-page {
   padding: 80px 0 100px;
   color: #fff;
 }
 
-.about-us img {
+.about-us img,
+  .other-page img {
   width: 100%;
 }
 
-.about-us h1 {
+.about-us h1,
+  .other-page h1 {
   text-align: center;
   font-size: 60px;
   padding-bottom: 30px;
 }
 
-.about-us__text {
+.about-us__text,
+  .other-page__text {
   padding-top: 60px;
 }
 
-.about-us__text p {
+.about-us__text p,
+    .other-page__text p {
   font-size: 18px;
   line-height: 1.7;
 }
 
-.about-us h2 {
+.about-us h2,
+  .other-page h2 {
   font-size: 35px;
   margin-bottom: 30px;
 }
@@ -9363,6 +9369,94 @@ footer h2 {
 .team__name {
   padding: 15px 0 0;
   margin-bottom: 0;
+}
+
+.ol-list {
+  counter-reset: item;
+  margin: 0;
+  padding-left: 10px;
+  line-height: 1.9;
+}
+
+.ol-list > li {
+  display: block;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.ol-list > li:before {
+  content: counters(item, ".") " ";
+  counter-increment: item;
+}
+
+.ol-list ul {
+  list-style-type: disc;
+  padding-left: 25px;
+}
+
+.contacts__item {
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .contacts__item {
+    margin-bottom: 30px;
+  }
+}
+
+.contacts__items {
+  margin-bottom: 60px;
+}
+
+.contacts__icon {
+  width: 120px;
+  height: 120px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #cfd1d8;
+  font-size: 35px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.contacts .input-form {
+  background: #2d323f;
+}
+
+.other-page a,
+.other-page p {
+  color: #cfd1d8;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+@media (max-width: 767px) {
+  .map {
+    margin-bottom: 30px;
+  }
+}
+
+#svyaz label,
+#svyaz input,
+#svyaz textarea {
+  width: 100%;
+}
+
+#svyaz label {
+  font-size: 14px;
+  color: #cfd1d8;
+}
+
+#svyaz input {
+  margin-bottom: 15px;
+}
+
+#svyaz .form-submit {
+  margin-top: 15px;
+  margin-left: 0;
 }
 
 /*==========  Desktop First  ==========*/

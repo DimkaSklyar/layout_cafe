@@ -14,7 +14,7 @@ $(document).ready(function () {
     agreement: {
       isRequired: true,
       isChecked: true,
-      isLink: 'https://smartlanding.biz'
+      isLink: '../politic.html'
     }
   });
 
@@ -114,8 +114,7 @@ $(".btn_close_menu").click(function (e) {
       // instead of a settings object
     ]
   });
-  var mixer = mixitup('.mixitup-1');
-  var mixer = mixitup('.mixitup-2');
+
 
   $(".menu_tabs__item").click(function (e) {
     $(".menu_tabs__item").removeClass("active");
@@ -148,7 +147,7 @@ function AjaxFormRequest(result_id, formMain, url) {
       error.classList.add("mt-3","error");
       error.innerHTML = "Возникла ошибка при отправке формы.";
       par.appendChild(error);
-      setTimeout(func, 7000);
+      setTimeout(func, 700);
     }
   });
 }
@@ -164,4 +163,9 @@ $('#descount').submit(function (e) {
 $('#subscribe').submit(function (e) {
   e.preventDefault();
   AjaxFormRequest('messegeResult-subscribe', 'subscribe', '../subscribe.php');
+});
+
+$('#svyaz').submit(function (e) {
+  e.preventDefault();
+  AjaxFormRequest('messegeResult-svyaz', 'svyaz', '../svyaz.php');
 });
